@@ -10,7 +10,9 @@ const TodoListTemplate = ({form, children}) => {
             <div className="title">
                 To-Do
             </div>
+            {/* input field 생성 */}
             <section className="form-wrapper">
+                {form}
                 {children}
             </section>
         </main>
