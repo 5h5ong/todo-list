@@ -15,8 +15,8 @@ class TodoItem extends Component
                     // 즉, 부모의 onToggle은 실행되지 않고 onRemove만 실행되게 됨.
                     e.stopPropagation();
                     onRemove(id)}
-                }>&times;</div>
-                <div className={`todo-text${checked && 'checked'}`}>
+                }>&#215;</div>
+                <div className={`todo-text ${checked && 'checked'}`}>
                     <div>{text}</div>
                 </div>
                 {

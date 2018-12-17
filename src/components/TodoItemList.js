@@ -5,12 +5,30 @@ class TodoItemList extends Component
 {
     render()
     {
-        //const { todos, onToggle, onRemove } = this.Props;
+        const { todos, onToggle, onRemove } = this.props;
+
+        const todoList = todos.map(
+            ({id, text, checked}) => (
+                <TodoItem 
+                    id={id}
+                    text={text}
+                    checked={checked}
+                    onToggle={onToggle}
+                    onRemove={onRemove}
+                    key={id}
+                />
+                // <TodoItem 
+                //     // 자동으로 props로 설정
+                //     {...todos}
+                //     onToggle={onToggle}
+                //     onRemove={onRemove}
+                //     key={id}
+                // />
+            )
+        );
         return (
             <div>
-                <TodoItem text="test1" />
-                <TodoItem text="react" />
-                <TodoItem text="text3" />
+                {todoList}
             </div>
         );
     };
